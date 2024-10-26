@@ -9,6 +9,11 @@ export const routes: Routes = [
          
 
         ]
+    },
+    {
+        path: 'login',
+        loadComponent: ()=> import('./bussiness/authentication/login/login.component'),
+      
     }
    
 

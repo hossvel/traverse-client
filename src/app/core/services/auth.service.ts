@@ -9,9 +9,7 @@ import { environment } from '../../../environments/environment';
 })
 export class AuthService {
 
-  
-
-  URL_API: string = environment.URL_API;
+    URL_API: string = environment.URL_API;
 
   private tokenKey = 'authToken';
   constructor(private httpClient: HttpClient, private router: Router) { }

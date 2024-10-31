@@ -4,6 +4,9 @@ import { SidebarComponent } from '../sidebar/sidebar.component';
 import { FooterComponent } from '../footer/footer.component';
 import { RouterOutlet } from '@angular/router';
 
+// Ensure Bootstrap JS is properly imported
+declare var bootstrap: any;
+
 @Component({
   selector: 'app-layout',
   standalone: true,
@@ -13,4 +16,17 @@ import { RouterOutlet } from '@angular/router';
 })
 export default class LayoutComponent {
 
+  title = 'admin-dashboard';
+  isSidebarClosed = false;
+
+  handleSidebarToggle(isClosed: boolean) {
+    this.isSidebarClosed = isClosed;
+  }
+
+  openSettingsModal() {
+    const settingsModal = new bootstrap.Modal(document.getElementById('settingsModal'), {
+      keyboard: false
+    });
+    settingsModal.show();
+  }
 }

@@ -14,6 +14,11 @@ export const routes: Routes = [
                 canActivate: [AuthGuard]
             },
             {
+                path: 'category',
+                loadComponent: () => import('./bussiness/category/category.component'),
+                canActivate: [AuthGuard]
+            },
+            {
                 path: '',
                 redirectTo: 'dashboard',
                 pathMatch: 'full'
@@ -26,6 +31,7 @@ export const routes: Routes = [
         loadComponent: ()=> import('./bussiness/authentication/login/login.component'),
         canActivate: [AuthenticatedGuard]
     },
+ 
     {
         path: '**',
         redirectTo: 'dashboard'

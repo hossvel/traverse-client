@@ -33,12 +33,17 @@ export class AuthService {
     localStorage.setItem(this.tokenKey, token);
   } 
 
-  private getToken(): string | null {
+  /*
+   getToken(): string | null {
     if(typeof window !== 'undefined'){
       return localStorage.getItem(this.tokenKey);
     }else {
       return null;
     }
+  }*/
+
+   getToken():string {
+    return localStorage.getItem(this.tokenKey) || '';
   }
 
   isAuthenticated(): boolean {

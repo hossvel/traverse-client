@@ -31,7 +31,11 @@ export const routes: Routes = [
         loadComponent: ()=> import('./bussiness/authentication/login/login.component'),
         canActivate: [AuthenticatedGuard]
     },
- 
+    {
+        path: 'register',
+        loadComponent: ()=> import('./bussiness/authentication/register/register.component'),
+        canActivate: [AuthenticatedGuard]
+    },
     {
         path: '**',
         redirectTo: 'dashboard'

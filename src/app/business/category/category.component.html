@@ -1,0 +1,31 @@
+<div class="row mb-4">
+  <div class="col-md-8">
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <h5 class="card-title">Categories</h5>
+        <div class="table-responsive">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Category ID</th>
+                <th>Name</th>
+                <th>Description</th>
+               
+              </tr>
+            </thead>
+            <tbody>
+              @for (item of categoryList; track $index) {
+                <tr>
+                    <th scope="row"> {{item.id}}</th>
+                    <td>{{item.name}}</td>
+                    <td>{{item.description}}</td>
+                   
+                </tr>
+              }
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -13,15 +13,15 @@ import { CommonModule } from '@angular/common';
 export default class LoginComponent {
   user: string = '';
   password: string = '';
-  constructor(){}
+  //constructor(){}
 
-  //constructor(private authService: AuthService, private router: Router){
+  constructor(private authService: AuthService, private router: Router){
 
-  //}
+  }
 
   login(): void {
-console.log(this.user);
-/*
+    console.log(this.user);
+
     this.authService.login(this.user, this.password).subscribe({
       next: (response)=> {
         const token = response.token;
@@ -30,6 +30,6 @@ console.log(this.user);
        this.router.navigate(['/']);
       },
       error: (err) => console.error('Login failed', err)
-    })*/
+    })
   }
 }

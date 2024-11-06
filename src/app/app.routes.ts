@@ -5,7 +5,11 @@ export const routes: Routes = [
         path: '',
         loadComponent: () => import('./shared/components/layout/layout.component'),
         children: [
-           
+            {
+                path: 'dashboard',
+                loadComponent: () => import('./business/dashboard/dashboard.component'),
+                
+            },
          
 
         ]
